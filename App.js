@@ -27,13 +27,27 @@ export default function App() {
     <View style = {styles.containerSearch}> 
       <TextInput
       placeholder='Digite o filme que deseja buscar'
+      style = {styles.inputSearch}
       ></TextInput>
+
+      <TouchableOpacity>
+      <Feather name="search" size={24} color="black" />
+      </TouchableOpacity>
+
+    
     </View>
 
 
 
       {/*INICIO DO BANNER */}
 
+      <Text style = {styles.textBanner}> Em Cartaz </Text>
+
+      <Image
+      source = {require("./assets/Matrix.jpg")
+      }style = {styles.imageBanner}
+       />
+    
 
 
 
@@ -84,6 +98,36 @@ containerSearch:{
   width:"90%",
   backgroundColor:'white',
   borderRadius:5,
-  padding:8
+  padding:8,
+  flexDirection:'row',
+  justifyContent:'space-between',
+  alignItems: 'center'
 },
+
+inputSearch: {
+
+  height: 40,
+  padding: 4,
+  width: '100%'
+},
+
+
+//Banner
+imageBanner: {
+width:'90%',
+height:400,
+ marginTop:15,
+ borderRadius:10
+},
+
+ textBanner:  {
+
+  color:'white',
+  width:'90%',
+  fontSize:30,
+  marginTop:20,
+  fontWeight:'bold'
+  
+ }
+
 });
