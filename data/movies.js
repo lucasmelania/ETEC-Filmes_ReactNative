@@ -15,7 +15,7 @@ const DATA = [
     id: '03',
     nome: 'Entergalactic',
     nota: '5.0',
-    imagem: 'https://www.themoviedb.org/movie/1027014-entergalactic',
+    imagem: 'https://i.pinimg.com/736x/05/5a/44/055a44aca069fd289488cc8c999fc156.jpg',
   },
   {
     id: '04',
@@ -27,7 +27,7 @@ const DATA = [
     id: '05',
     nome: 'One Piece Red',
     nota: '4.5',
-    imagem: 'https://image.tmdb.org/t/p/w500/ogbZ0v0Y9Q0Q0Q0Q0Q0Q0Q.jpg',
+    imagem: 'https://upload.wikimedia.org/wikipedia/pt/8/8c/Cartaz_do_filme_One_Piece_Film_Red.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20250806032756',
   },
   {
     id: '06',
@@ -39,25 +39,25 @@ const DATA = [
     id: '07',
     nome: 'Mortal Kombat',
     nota: '4.7',
-    imagem: 'https://image.tmdb.org/t/p/w500/8e0Fz7G2Q0Q0Q0Q0Q0Q0Q0.jpg',
+    imagem: 'https://uauposters.com.br/cdn/shop/files/345620211103-uau-posters-mortal-kombat-filmes.jpg?v=1772656465&width=1200',
   },
   {
     id: '08',
     nome: 'Homem-Aranha: Através do Aranhaverso',
     nota: '5.0',
-    imagem: 'https://image.tmdb.org/t/p/w500/8Vt6m5Q0Q0Q0Q0Q0Q0Q0Q0.jpg',
+    imagem: 'https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107232',
   },
   {
     id: '09',
-    nome: 'Divertidamente',
+    nome: 'Um Sonho de Liberdade',
     nota: '4.9',
-    imagem: 'https://image.tmdb.org/t/p/w500/lRHE0vzf3oYJrhbsHXjIkF4Tl5A.jpg',
+    imagem: 'https://pablogonzalezblasco.com.br/wp-content/uploads/sites/5/2022/08/20083748-725x1024.jpg',
   },
   {
     id: '10',
     nome: 'Michel Jacson',
     nota: '9.0',
-    imagem: 'https://image.tmdb.org/t/p/w500/1qQ0Q0Q0Q0Q0Q0Q0Q0Q0.jpg',
+    imagem: 'https://www.universalpics.com.br/tl_files/content/movies/michael/posters/01.jpg',
   }
 ];
 

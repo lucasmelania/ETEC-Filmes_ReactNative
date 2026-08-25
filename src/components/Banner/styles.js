@@ -6,7 +6,7 @@ const styles3 = StyleSheet.create({
 //Banner
 imageBanner: {
 width:'90%',
-height:350,
+height:220,
  marginTop:15,
  borderRadius:10
 },

@@ -1,72 +1,133 @@
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  FlatList,
+  ScrollView
+} from 'react-native';
 
-import { StyleSheet, Text, View, TouchableOpacity,TextInput,Image } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
+
 import Header from './src/components/Header';
 import Search from './src/components/Search';
 import Banner from './src/components/Banner';
-import movies from './data/movies'
-import { FlatList } from 'react-native-web';
+import movies from './data/movies';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     
-     
-    {/*INICIO DA HEADER */}
+    <ScrollView
+      style={styles.scroll}
+      contentContainerStyle={styles.container}
+      showsVerticalScrollIndicator={false}
+    >
 
-    <Header></Header>
+      {/* INICIO DA HEADER */}
+      <Header />
 
-     {/*INICIO DA BARRA DE PESQUISA */}
+      {/* INICIO DA BARRA DE PESQUISA */}
+      <Search />
 
-   <Search></Search>
+      {/* INICIO DO BANNER */}
+      <Banner />
 
-      {/*INICIO DO BANNER */}
+      {/* INICIO DOS FILMES */}
+      <View style={styles.listaFilmes}>
 
-      <Banner></Banner>
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={movies}
+          keyExtractor={(item) => item.id.toString()}
 
-      <View style = {{width:'90%'}}>
+          renderItem={({ item }) => (
 
-<FlatList
- horizontal= {true}
-data={movies} 
-keyExtractor={(item)=> item.id}
-renderItem={({item}) => (
+            <TouchableOpacity style={styles.containerFilmes}>
 
-<TouchableOpacity>
-<Image style ={{width:80,height:100}} source={{uri:item.imagem}}></Image>
-  <Text>{item.nome}</Text>
-</TouchableOpacity>
+              {/* IMAGEM DO FILME */}
+              <Image
+                style={styles.images}
+                source={{ uri: item.imagem }}
+              />
 
+              {/* NOME DO FILME */}
+              <Text
+                style={styles.titulo}
+                numberOfLines={2}
+              >
+                {item.nome}
+              </Text>
 
+              {/* NOTA */}
+              <View style={styles.notaContainer}>
+                <Text>
+                  ⭐
+                </Text>
 
-)}
+                <Text style={styles.textNota}>
+                  8.5
+                </Text>
+              </View>
 
-/>
+            </TouchableOpacity>
 
-
+          )}
+        />
 
       </View>
 
-  
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+
+  scroll: {
     flex: 1,
-    alignItems:'center',
     backgroundColor: '#141a29',
-    
   },
 
+  container: {
+    backgroundColor: '#141a29',
+    alignItems: 'center',
+    paddingBottom: 30,
+  },
 
-//HEADER
+  listaFilmes: {
+    width: '90%',
+  },
 
+  containerFilmes: {
+    paddingTop: 20,
+    paddingBottom: 16,
+    paddingRight: 16,
+    width: 140,
+    height: 250,
+  },
 
+  titulo: {
+    color: '#fff',
+    fontSize: 12,
+    paddingTop: 8,
+  },
 
-// SEARCH BAR
+  textNota: {
+    fontSize: 10,
+    color: '#fff',
+    paddingLeft: 4,
+  },
 
+  notaContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 4,
+  },
 
+  images: {
+    width: '100%',
+    height: 170,
+    borderRadius: 8,
+  },
 
 });
