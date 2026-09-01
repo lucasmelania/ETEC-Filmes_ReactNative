@@ -6,9 +6,11 @@ const styles3 = StyleSheet.create({
 //Banner
 imageBanner: {
 width:'90%',
-height:220,
+height:205,
  marginTop:15,
- borderRadius:10
+ borderRadius:10,
+  alignSelf: 'center',
+ 
 },
 
  textBanner:  {
@@ -17,7 +19,8 @@ height:220,
   width:'90%',
   fontSize:30,
   marginTop:20,
-  fontWeight:'bold'
+  fontWeight:'bold',
+   alignSelf: 'center',
   
  }
 

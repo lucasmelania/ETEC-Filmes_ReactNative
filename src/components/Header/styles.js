@@ -11,6 +11,7 @@ viewHeader: {
     alignItems:'center',
     marginTop:10,
     justifyContent: 'space-between',
+     alignSelf: 'center',
   
   
   
@@ -21,6 +22,7 @@ viewHeader: {
     fontSize:25,
     color:'white',
     fontWeight:'bold',
+    
   
   },
 

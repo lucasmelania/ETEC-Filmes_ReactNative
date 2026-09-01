@@ -2,13 +2,13 @@ const DATA = [
   {
     id: '01',
     nome: 'Moana',
-    nota: '4.5',
+    nota: '7.5',
     imagem: 'https://image.tmdb.org/t/p/w500/9tzN8sPbyod2dsa0lwuvrwBDWra.jpg',
   },
   {
     id: '02',
     nome: 'Detona Ralph',
-    nota: '4.5',
+    nota: '8.0',
     imagem: 'https://media.themoviedb.org/t/p/w600_and_h900_face/9OGpoSaGGwbWSFQVFaVGakLyaoK.jpg',
   },
   {
@@ -20,7 +20,7 @@ const DATA = [
   {
     id: '04',
     nome: 'Rambo: Programado Para Matar',
-    nota: '7.5',
+    nota: '10.0',
     imagem: 'https://media.themoviedb.org/t/p/w600_and_h900_face/eZlxLq2iNpDKvjpjLhEJV2gK6Kk.jpg',
   },
   {
@@ -32,7 +32,7 @@ const DATA = [
   {
     id: '06',
     nome: 'Titanic',
-    nota: '4.2',
+    nota: '8.0',
     imagem: 'https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg',
   },
   {
@@ -44,13 +44,13 @@ const DATA = [
   {
     id: '08',
     nome: 'Homem-Aranha: Através do Aranhaverso',
-    nota: '5.0',
+    nota: '9.0',
     imagem: 'https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107232',
   },
   {
     id: '09',
     nome: 'Um Sonho de Liberdade',
-    nota: '4.9',
+    nota: '8.5',
     imagem: 'https://pablogonzalezblasco.com.br/wp-content/uploads/sites/5/2022/08/20083748-725x1024.jpg',
   },
   {
