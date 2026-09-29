@@ -1,15 +1,27 @@
-import { View,Text } from "react-native";
+import { View, Text, Image } from "react-native";
+import { useRoute } from "@react-navigation/native";
 
-export default function Detalhes(){
+export default function Detalhes() {
+  const route = useRoute();
 
-    return(
+  return (
+    <View>
+      <Text>ESSA É MINHA TELA DE DETALHES</Text>
 
-        <View>
-            <Text> ESSA É MiNHA TELA DE DETALHES</Text>
+      <Text>{route.params.nome}</Text>
 
-        </View>
+      <Text>⭐ {route.params.nota}</Text>
 
-    )
+      <Image
+  style={{
+    width: 200,
+    height: 300,
+    borderRadius: 10,
+  }}
+  source={{ uri: route.params.imagem }}
+/>
 
 
+    </View>
+  );
 }

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#141a29',
     alignItems: 'center',
     paddingBottom: 30,
+    
   },
 
   listaFilmes: {
