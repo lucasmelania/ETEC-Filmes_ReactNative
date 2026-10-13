@@ -20,18 +20,16 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 16,
     paddingRight: 16,
-    width: 140,
-    height: 250,
   },
 
   titulo: {
     color: '#fff',
-    fontSize: 12,
+    fontSize: 14,
     paddingTop: 8,
   },
 
   textNota: {
-    fontSize: 10,
+    fontSize: 12,
     color: '#fff',
     paddingLeft: 4,
   },
@@ -44,7 +42,6 @@ const styles = StyleSheet.create({
 
   images: {
     width: '100%',
-    height: 170,
     borderRadius: 8,
   },
 

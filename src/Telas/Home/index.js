@@ -13,7 +13,10 @@ export default function Home() {
     <ScrollView
       style={styles.scroll}
       contentContainerStyle={styles.container}
+      scrollEnabled
+      nestedScrollEnabled
       showsVerticalScrollIndicator={false}
+      bounces
     >
 
       <Header />
@@ -33,11 +36,14 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     backgroundColor: '#141a29',
+    minHeight: 0,
   },
 
   container: {
     width: '100%',
     alignItems: 'center',
+    flexGrow: 1,
     paddingBottom: 30,
+    
   },
 });

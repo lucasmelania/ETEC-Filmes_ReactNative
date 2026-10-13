@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View, TouchableOpacity,TextInput,Image } from 'react-native';
-import Feather from '@expo/vector-icons/Feather';
+import { Text, Image, useWindowDimensions } from 'react-native';
 import styles3 from './styles';
 
 export default function Banner (){
+    const { width } = useWindowDimensions();
+    const bannerWidth = Math.min(width * 0.9, 1100);
+    const bannerHeight = Math.max(360, Math.min(bannerWidth * 0.75, 600));
 
     return(
 
@@ -11,11 +13,11 @@ export default function Banner (){
          
                <Image
                source = {require("../../../assets/Matrix2.jpg")
-               }style = {styles3.imageBanner}
+               }style = {[styles3.imageBanner, { width: bannerWidth, height: bannerHeight }]}
+               resizeMode="cover"
                 />
              </>
     );
 
 
 }
-

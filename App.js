@@ -19,21 +19,11 @@ import Rotas from './src/Rotas/index.js';
 
 export default function App() {
   return (
+   
 
     <Rotas></Rotas>
 
+   
   );
 }
 
-const styles = StyleSheet.create({
-
-  scroll: {
-    flex: 1,
-    backgroundColor: '#141a29',
-  },
-  container: {
-    alignItems: 'center',
-    paddingBottom: 30,
-  },
-
-});

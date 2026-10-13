@@ -3,7 +3,8 @@ import {
   View,
   TouchableOpacity,
   Image,
-  FlatList
+  ScrollView,
+  useWindowDimensions
 } from 'react-native';
 
 import movies from '../../../data/movies';
@@ -13,20 +14,27 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function CardMovies() {
   const navigation = useNavigation();
+  const { width } = useWindowDimensions();
+  const cardWidth = Math.min(
+    250,
+    Math.max(130, width * (width < 600 ? 0.42 : width < 1000 ? 0.32 : 0.24))
+  );
+  const posterHeight = cardWidth * 1.45;
+  const cardHeight = posterHeight + 80;
 
   return (
-    <View style={styles.listaFilmes}>
+    <View style={[styles.listaFilmes, { height: cardHeight + 20 }]}>
 
-      <FlatList
+      <ScrollView
         horizontal={true}
+        scrollEnabled
+        nestedScrollEnabled
         showsHorizontalScrollIndicator={false}
-        data={movies}
-        keyExtractor={(item) => item.id.toString()}
-
-        renderItem={({ item }) => (
-
+      >
+        {movies.map((item) => (
           <TouchableOpacity
-            style={styles.containerFilmes}
+            key={item.id.toString()}
+            style={[styles.containerFilmes, { width: cardWidth, height: cardHeight }]}
             onPress={() =>
               navigation.navigate('Detalhes', {
                 nome: item.nome, nota: item.nota, imagem: item.imagem
@@ -36,8 +44,9 @@ export default function CardMovies() {
 
             {/* IMAGEM DO FILME */}
             <Image
-              style={styles.images}
+              style={[styles.images, { height: posterHeight }]}
               source={{ uri: item.imagem }}
+              resizeMode="cover"
             />
 
             {/* NOME DO FILME */}
@@ -60,9 +69,8 @@ export default function CardMovies() {
             </View>
 
           </TouchableOpacity>
-
-        )}
-      />
+        ))}
+      </ScrollView>
 
     </View>
   );
