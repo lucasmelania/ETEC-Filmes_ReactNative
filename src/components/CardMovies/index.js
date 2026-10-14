@@ -37,7 +37,10 @@ export default function CardMovies() {
             style={[styles.containerFilmes, { width: cardWidth, height: cardHeight }]}
             onPress={() =>
               navigation.navigate('Detalhes', {
-                nome: item.nome, nota: item.nota, imagem: item.imagem
+                nome: item.nome,
+                nota: item.nota,
+                imagem: item.imagem,
+                sinopse: item.sinopse,
               })
             }
           >
